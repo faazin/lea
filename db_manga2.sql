@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 30 Bulan Mei 2023 pada 13.56
+-- Waktu pembuatan: 30 Bulan Mei 2023 pada 14.16
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -106,7 +106,9 @@ INSERT INTO `manga` (`id`, `manga_title`, `author`, `gambar`, `start_year`, `end
 (22, 'Overlord', 'Kugane Maruyama', 'overlord.jpg', 2010, NULL),
 (30, 'Wallpaper Aja', 'Teuing', 'wallpaperflare.com_wallpaper (1).jpg', 2001, 2006),
 (31, 'Classroom Elite', 'Unknown', 'classroomelite.jpg', 2015, NULL),
-(32, 'Classroom Elite', 'Unknown', 'classroomelite.jpg', 2015, NULL);
+(32, 'Classroom Elite', 'Unknown', 'classroomelite.jpg', 2015, NULL),
+(33, 'iahkhad', 'daezrhz', 'FdafDf', 2335, 5346),
+(34, 'iahkhad', 'daezrhz', 'FdafDf', 2335, 5346);
 
 -- --------------------------------------------------------
 
@@ -258,7 +260,7 @@ ALTER TABLE `genre`
 -- AUTO_INCREMENT untuk tabel `manga`
 --
 ALTER TABLE `manga`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
