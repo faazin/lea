@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 26 Bulan Mei 2023 pada 01.04
+-- Waktu pembuatan: 30 Bulan Mei 2023 pada 14.16
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -39,8 +39,6 @@ CREATE TABLE `genre` (
 INSERT INTO `genre` (`genre_id`, `genre_name`) VALUES
 (1, 'Action'),
 (2, 'Adventure'),
-(3, 'Comedy'),
-(4, 'Drama'),
 (5, 'Fantasy'),
 (6, 'Shounen'),
 (7, 'Mystery'),
@@ -54,7 +52,6 @@ INSERT INTO `genre` (`genre_id`, `genre_name`) VALUES
 (15, 'Magic'),
 (16, 'Horror'),
 (17, 'Romance'),
-(18, 'Magical Girl'),
 (19, 'Martial Arts'),
 (20, 'Superpower'),
 (21, 'Virtual Reality'),
@@ -106,7 +103,12 @@ INSERT INTO `manga` (`id`, `manga_title`, `author`, `gambar`, `start_year`, `end
 (19, 'Re:Zero − Starting Life in Another World', 'Tappei Nagatsuki', 're zero.jpg', 2014, NULL),
 (20, 'The Rising of the Shield Hero', 'Aneko Yusagi', 'tate no yusha.jpg', 2013, NULL),
 (21, 'That Time I Got Reincarnated as a Slime', 'Fuse', 'tensei shitara.jpg', 2013, NULL),
-(22, 'Overlord', 'Kugane Maruyama', 'overlord.jpg', 2010, NULL);
+(22, 'Overlord', 'Kugane Maruyama', 'overlord.jpg', 2010, NULL),
+(30, 'Wallpaper Aja', 'Teuing', 'wallpaperflare.com_wallpaper (1).jpg', 2001, 2006),
+(31, 'Classroom Elite', 'Unknown', 'classroomelite.jpg', 2015, NULL),
+(32, 'Classroom Elite', 'Unknown', 'classroomelite.jpg', 2015, NULL),
+(33, 'iahkhad', 'daezrhz', 'FdafDf', 2335, 5346),
+(34, 'iahkhad', 'daezrhz', 'FdafDf', 2335, 5346);
 
 -- --------------------------------------------------------
 
@@ -126,12 +128,9 @@ CREATE TABLE `manga_genre` (
 INSERT INTO `manga_genre` (`manga_id`, `genre_id`) VALUES
 (1, 1),
 (1, 2),
-(1, 3),
-(1, 4),
 (1, 5),
 (1, 6),
 (2, 1),
-(2, 4),
 (2, 5),
 (2, 6),
 (2, 7),
@@ -144,19 +143,16 @@ INSERT INTO `manga_genre` (`manga_id`, `genre_id`) VALUES
 (4, 2),
 (4, 8),
 (5, 1),
-(5, 3),
 (5, 6),
 (5, 11),
 (5, 12),
 (5, 13),
 (6, 1),
-(6, 3),
 (6, 6),
 (6, 13),
 (6, 14),
 (7, 1),
 (7, 2),
-(7, 4),
 (7, 5),
 (7, 6),
 (8, 1),
@@ -166,19 +162,16 @@ INSERT INTO `manga_genre` (`manga_id`, `genre_id`) VALUES
 (8, 8),
 (9, 1),
 (9, 2),
-(9, 3),
 (9, 5),
 (9, 6),
 (9, 15),
 (10, 1),
-(10, 4),
 (10, 7),
 (10, 8),
 (10, 16),
 (11, 2),
 (11, 11),
 (11, 17),
-(11, 18),
 (12, 1),
 (12, 2),
 (12, 6),
@@ -196,7 +189,6 @@ INSERT INTO `manga_genre` (`manga_id`, `genre_id`) VALUES
 (14, 22),
 (15, 1),
 (15, 2),
-(15, 4),
 (15, 5),
 (15, 6),
 (16, 1),
@@ -204,16 +196,13 @@ INSERT INTO `manga_genre` (`manga_id`, `genre_id`) VALUES
 (16, 14),
 (16, 17),
 (16, 23),
-(17, 3),
 (17, 6),
 (17, 14),
 (17, 17),
 (17, 23),
-(18, 4),
 (18, 6),
 (18, 14),
 (18, 17),
-(19, 4),
 (19, 5),
 (19, 19),
 (19, 24),
@@ -221,19 +210,18 @@ INSERT INTO `manga_genre` (`manga_id`, `genre_id`) VALUES
 (19, 26),
 (20, 1),
 (20, 2),
-(20, 4),
 (20, 5),
 (20, 25),
 (21, 2),
-(21, 3),
 (21, 11),
 (21, 22),
 (21, 25),
 (22, 1),
 (22, 2),
-(22, 4),
 (22, 5),
-(22, 25);
+(22, 25),
+(30, 1),
+(30, 5);
 
 --
 -- Indexes for dumped tables
@@ -266,13 +254,13 @@ ALTER TABLE `manga_genre`
 -- AUTO_INCREMENT untuk tabel `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `genre_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `genre_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT untuk tabel `manga`
 --
 ALTER TABLE `manga`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
